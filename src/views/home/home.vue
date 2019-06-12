@@ -17,17 +17,61 @@
     </el-header>
     <el-container class="container">
       <el-aside class="aside" width="200px">
-        <el-menu class="menu" :unique-opened="true" :router="true">
-          <el-submenu v-for="item in menus" :key="item.id" :index="''+item.id">
+        <el-menu :unique-opened="true" :router="true">
+          <!-- 1 -->
+          <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
-              <span>{{ item.authName}}</span>
+              <span>用户管理</span>
             </template>
-
-            <!-- <el-menu-item v-for="item1 in item.children" :key="item1.id" :index=""/" + item1.path">
-              <i class="el-icon-menu"></i>
-              {{ item1.authName }}
-            </el-menu-item>-->
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>用户列表</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 2 -->
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>商品管理</span>
+            </template>
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>导航一</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 3 -->
+          <el-submenu index="3">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>分类管理</span>
+            </template>
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>用户列表</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 4 -->
+          <el-submenu index="4">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>订单管理</span>
+            </template>
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>导航一</span>
+            </el-menu-item>
+          </el-submenu>
+          <!-- 5 -->
+          <el-submenu index="5">
+            <template slot="title">
+              <i class="el-icon-location"></i>
+              <span>个人信息</span>
+            </template>
+            <el-menu-item index="1-1">
+              <i class="el-icon-location"></i>
+              <span>导航一</span>
+            </el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
@@ -46,8 +90,9 @@ export default {
       menus: []
     };
   },
+  methods: {},
   beforeCreate() {
-    // 从session中获取token 判断是否有token
+    // 从localStorage中获取token 判断是否有token
     const token = localStorage.getItem("token");
     if (!token) {
       // 返回登录页
