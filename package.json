@@ -1,0 +1,19 @@
+{
+  "name": "vue-source-code",
+  "version": "1.0.0",
+  "description": "Now is the best time to learn the source code of vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yayxs",
+  "license": "ISC",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
