@@ -1,7 +1,8 @@
 {
-  "name": "vue-source-code",
-  "version": "1.0.0",
-  "description": "Now is the best time to learn the source code of vue",
+  "name": "learn-vue",
+  "version": "0.0.2",
+  "description": "Now is the best time to relearn vue",
+  "repository": {},
   "scripts": {
     "bd": "rollup -c",
     "ss": "cross-env ENV=development rollup  -c -w",

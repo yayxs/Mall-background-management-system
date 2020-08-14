@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app-6">
+      <p>{{ message }}</p>
+      <input v-model="message" placeholder="编辑"/>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+      var app6 = new Vue({
+        el: "#app-6",
+        data: {
+          message: "Hello Vue!",
+        },
+      });
+      /**
+       * 表单输入和应用状态之间的双向绑定
+       * 可以作用在
+       * 
+      */
+    </script>
+  </body>
+</html>

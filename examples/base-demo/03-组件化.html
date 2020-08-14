@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>组件化</title>
+  </head>
+  <body>
+    <div id="app">
+      <todo-item></todo-item>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      // 定义名为 todo-item 的新组件
+      let templateStr = `
+        <h3>这是一个h3</h3>
+      `;
+      Vue.component("todo-item", {
+        template: templateStr,
+      });
+      let app = new Vue({
+        el: "#app",
+      });
+    </script>
+  </body>
+</html>

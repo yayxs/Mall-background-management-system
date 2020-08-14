@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对象的观测Object.defineProperty</title>
+  </head>
+  <body>
+    <script>
+      let book = {
+        type: "js",
+        price: 20,
+      };
+      let val = book["price"];
+      Object.defineProperty(book, "price", {
+        enumerable: true,
+        configurable: true,
+        get() {
+          console.log(`price属性被读取`);
+          return val;
+        },
+        set(newPrice) {
+          console.log(`重新设置price为${newPrice}`);
+          val = newPrice;
+        },
+      });
+      
+    </script>
+  </body>
+</html>
