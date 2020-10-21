@@ -11,5 +11,11 @@ module.exports = {
     ]);
     // 正是由于空闲时间提前获取用户未来可能访问的内容，所以移除这个插件
     config.plugins.delete("prefetch");
+    // 图片的引入，通过file-loader 然后使用url-loader 减少http 的气你供求 的树龄
+    config.module
+      .rule("images")
+      .use("url-loader")
+      .loader("url-loader")
+      .tap((ops) => Object.assign(ops, { limit: 10240 }));
   },
 };
