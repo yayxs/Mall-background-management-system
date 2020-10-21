@@ -1,37 +1,41 @@
-## Vue 2 官网
+# Vue CLI
 
-::: info
+## 特点
 
-1. 兼容性：不支持 IE8 以及以下
-2. 当前版本 2.6.12
-3. 理论上使用更小的运行版本，使用完整版需要在`webpack`等打包工具配置别名
-4. mode: 'production' 选项告知当前什么环境
-5. Vue+现代化工具链+类库
-6. 声明式渲染——`响应式`
-7. 条件与循环
-    - 强大的过渡效果
-    - v-for的key问题
-8. 处理用户输入
-    - @click 监听Vue实例的方法
-    - v-model 指令
-9. 组件化应用构建
-    - 一个组件是一个Vue实例
-    - 自定义组件与自定义元素
-10. 创建一个Vue实例
-    - new vue(options) // 选项对象
-    - Vue 组件亦是Vue实例
-11. 实例的生命周期钩子
-12. 模板语法
-    - 可以直接写渲染函数
-    - JSX 语法
-13. 插值语法
-    - 文本
-    - JS表达式
-14. 指令
-    - 指令的动态参数 v-bind:[attributeName]
-    - 修饰符 v-on:submit.prevent
-    - 缩写 :[key] @[event]
-15. 计算属性
-    - 计算属性缓存
-    - 方法
-:::
+- 开箱即用
+- 便于扩展
+- 不用弹出
+- 图形界面
+- 创建原型
+- 面向未来
+
+## 系统组件
+
+- CLI
+- CLI服务
+- CLI插件
+  - vue-cli-service 列出所有的插件
+
+```sh
+$ vue create --help
+Usage: create [options] <app-name>
+
+create a new project powered by vue-cli-service
+
+Options:
+  -p, --preset <presetName>       Skip prompts and use saved or remote preset
+  -d, --default                   Skip prompts and use default preset
+  -i, --inlinePreset <json>       Skip prompts and use inline JSON string as preset
+  -m, --packageManager <command>  Use specified npm client when installing dependencies
+  -r, --registry <url>            Use specified npm registry when installing dependencies (only for npm)
+  -g, --git [message]             Force git initialization with initial commit message
+  -n, --no-git                    Skip git initialization
+  -f, --force                     Overwrite target directory if it exists
+  --merge                         Merge target directory if it exists
+  -c, --clone                     Use git clone when fetching remote preset
+  -x, --proxy <proxyUrl>          Use specified proxy when creating project
+  -b, --bare                      Scaffold project without beginner instructions
+  --skipGetStarted                Skip displaying "Get started" instructions
+  -h, --help                      output usage information
+```
+
