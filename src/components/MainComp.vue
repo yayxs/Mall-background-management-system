@@ -11,11 +11,10 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from "vuex";
-import {
-  CHANGE_NAME_MUTATION,
-  FETCH_LIST_DATA_MUTATION,
-} from "../store/mutation-types";
+import { createNamespacedHelpers, mapState, mapMutations } from "vuex";
+const { mapActions } = createNamespacedHelpers("asyncModule");
+
+import { CHANGE_NAME_MUTATION } from "../store/mutation-types";
 export default {
   computed: {
     ...mapState({
@@ -36,14 +35,20 @@ export default {
     //     newName: "哈哈哈哈",
     //   });
     // },
-    fetchListAsync() {
-      this.$store.commit({
-        type: FETCH_LIST_DATA_MUTATION,
-      });
-    },
+    // fetchListAsync() {
+    //   // this.$store.commit({
+    //   //   type: FETCH_LIST_DATA_MUTATION,
+    //   // });
+    //   this.$store.dispatch("asyncModule", {
+    //     type: "fetchListDataAction",
+    //     // payload
+    //   });
+    // },
     ...mapMutations({
       changeName: CHANGE_NAME_MUTATION,
     }),
+    // // 以对象形式分发
+    ...mapActions(["fetchListAsync"]),
   },
 };
 </script>

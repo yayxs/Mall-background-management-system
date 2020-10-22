@@ -11,13 +11,10 @@ import Vue from "vue";
  */
 
 import Vuex from "vuex";
-import axios from "axios";
 Vue.use(Vuex);
 import getters from "./getters";
-import {
-  CHANGE_NAME_MUTATION,
-  FETCH_LIST_DATA_MUTATION,
-} from "./mutation-types";
+import asyncModule from "./modules/asyncModule";
+import { CHANGE_NAME_MUTATION } from "./mutation-types";
 export default new Vuex.Store({
   state: {
     num: 0,
@@ -39,7 +36,9 @@ export default new Vuex.Store({
     obj: {
       name: "subs",
     },
-    asyncData: [],
+  },
+  modules: {
+    asyncModule,
   },
   getters,
   mutations: {
@@ -57,11 +56,11 @@ export default new Vuex.Store({
       // state.obj.name = payload.newName;
       state.obj = { ...state.obj, name: payload.newName };
     },
-    [FETCH_LIST_DATA_MUTATION](state) {
-      console.log(state);
-      axios(`https://jsonplaceholder.typicode.com/users`).then((res) => {
-        console.log(res);
-      });
-    },
+  },
+  actions: {
+    /**
+     * context 对象为什么不是 store 实例本身了
+     * @param {*} ctx
+     */
   },
 });
