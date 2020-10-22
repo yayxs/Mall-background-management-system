@@ -1,16 +1,23 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <head-comp></head-comp>
+    <hr />
+    <banner-comp></banner-comp>
+    <hr />
+    <main-comp></main-comp>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import HeadComp from "./components/HeadComp";
+import BannerComp from "./components/BannerComp";
+import MainComp from "./components/MainComp";
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    HeadComp,
+    BannerComp,
+    MainComp,
   },
 };
 </script>
