@@ -1,3 +1,4 @@
+import axios from "axios";
 import Vue from "vue";
 /**
  * Store: typeof Store;
@@ -36,6 +37,7 @@ export default new Vuex.Store({
     obj: {
       name: "subs",
     },
+    res: null,
   },
   modules: {
     asyncModule,
@@ -56,11 +58,24 @@ export default new Vuex.Store({
       // state.obj.name = payload.newName;
       state.obj = { ...state.obj, name: payload.newName };
     },
+    changeRes(state, payload) {
+      console.log(state);
+      console.log(payload);
+      state.res = { ...payload.data };
+    },
   },
   actions: {
-    /**
-     * context 对象为什么不是 store 实例本身了
-     * @param {*} ctx
-     */
+    fetchList({ commit }) {
+      return new Promise((reso, rej) => {
+        axios(`https://jsonplaceholder.typicode.com/todos/1`)
+          .then((res) => {
+            commit("changeRes", res);
+            reso(res);
+          })
+          .catch((err) => {
+            rej(err);
+          });
+      });
+    },
   },
 });

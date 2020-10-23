@@ -5,6 +5,8 @@
     <banner-comp></banner-comp>
     <hr />
     <main-comp></main-comp>
+    <hr />
+    <footer-comp></footer-comp>
   </div>
 </template>
 
@@ -12,12 +14,14 @@
 import HeadComp from "./components/HeadComp";
 import BannerComp from "./components/BannerComp";
 import MainComp from "./components/MainComp";
+import FooterComp from "./components/FooterComp";
 export default {
   name: "App",
   components: {
     HeadComp,
     BannerComp,
     MainComp,
+    FooterComp,
   },
 };
 </script>
