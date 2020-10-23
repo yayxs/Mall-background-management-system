@@ -1,5 +1,5 @@
 {
-  "name": "vuex-example",
+  "name": "vue-router-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
+    "vue-router": "^3.4.7",
     "vuex": "^3.5.1",
     "vuex-persistedstate": "^4.0.0-beta.1"
   },
