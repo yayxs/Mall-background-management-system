@@ -13,10 +13,13 @@ import Vue from "vue";
 
 import Vuex from "vuex";
 Vue.use(Vuex);
+import createPersistedState from "vuex-persistedstate";
 import getters from "./getters";
 import asyncModule from "./modules/asyncModule";
 import { CHANGE_NAME_MUTATION } from "./mutation-types";
 export default new Vuex.Store({
+  strict: process.env.NODE_ENV !== "production",
+  plugins: [createPersistedState()],
   state: {
     num: 0,
     isLogin: false,

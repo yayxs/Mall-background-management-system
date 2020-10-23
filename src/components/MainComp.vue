@@ -7,6 +7,8 @@
     <ul>
       <li v-for="item in asyncData" :key="item.id">{{ item.name }}</li>
     </ul>
+    <hr />
+    <input type="text" v-model="obj.name" />
   </div>
 </template>
 
@@ -20,6 +22,7 @@ export default {
     ...mapState({
       isLogin: "isLogin",
       asyncData: "asyncData",
+      obj: "obj",
     }),
   },
   methods: {
