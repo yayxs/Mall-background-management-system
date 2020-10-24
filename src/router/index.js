@@ -6,11 +6,17 @@ import About from "@/pages/About.vue";
 import List from "@/pages/List.vue";
 import More from "@/pages/More.vue";
 import Detail from "@/pages/Detail.vue";
-
+import Main from "../components/Main.vue";
+import Aside from "../components/Aside.vue";
 const routes = [
   {
     path: "/home",
+    name: "home",
     component: Home,
+    // props: true,
+    props: {
+      name: "props",
+    },
   },
   {
     path: "/list",
@@ -24,7 +30,11 @@ const routes = [
   },
   {
     path: "/about",
-    component: About,
+    components: {
+      default: About,
+      a: Main,
+      b: Aside,
+    },
   },
   {
     path: "/more",

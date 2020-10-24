@@ -7,6 +7,7 @@
     <main-comp></main-comp>
     <hr />
     <footer-comp></footer-comp> -->
+    <button @click="goHome">去首页</button>
     <router-view></router-view>
   </div>
 </template>
@@ -23,6 +24,37 @@ export default {
     // BannerComp,
     // MainComp,
     // FooterComp,
+  },
+  methods: {
+    // params 参数传参的时候 path与params h会被忽略
+    goHome() {
+      // console.log(this.$router);
+      this.$router.push({
+        name: "home",
+        params: {
+          obj: {
+            name: "yayxs",
+            list: [
+              {
+                id: "1",
+              },
+            ],
+          },
+        },
+        query: {
+          info: {
+            desc: "query传参",
+          },
+          simm: "hah",
+          sin: "sin",
+          subs: [
+            {
+              id: 2,
+            },
+          ],
+        },
+      });
+    },
   },
 };
 </script>

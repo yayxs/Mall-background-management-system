@@ -2,13 +2,15 @@
   <div>
     <!-- Home {{ username }} -->
     <button @click="goback">返回</button>
+    {{ obj }}
   </div>
 </template>
 
 <script>
 export default {
+  props: ["obj"],
   mounted() {
-    console.log(this.$router);
+    // console.log(this.$router);
     console.log(this.$route);
   },
   computed: {
