@@ -1,30 +1,8 @@
 {
-  "name": "relearn-vue",
-  "version": "0.0.3",
-  "description": "Now is the best time to relearn vue",
-  "repository": {},
-  "scripts": {
-    "bd": "rollup -c",
-    "ss": "cross-env ENV=development rollup  -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "yayxs",
-  "license": "ISC",
-  "devDependencies": {
-    "cz-conventional-changelog": "^3.2.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "dependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "cross-env": "^7.0.2",
-    "rollup": "^2.18.1",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-serve": "^1.0.1"
-  }
+  "name": "vue-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yayxs/vue-learn.git",
+  "author": "yayxs <leaderywl@163.com>",
+  "license": "MIT"
 }
