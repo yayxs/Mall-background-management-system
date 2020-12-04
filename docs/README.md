@@ -5,7 +5,7 @@
 ├─.github
 ├─dist                           # 构建后的文件
 ├─flow                           # 类型声明文件
-├─packages                       # vue-server-renderer和vue-template-compiler，它们作为单独的NPM包发布
+├─packages                       # vue-server-renderer和vue-template-compiler，它们作为单独的NPM包发布                             
 │  ├─vue-server-renderer
 │  ├─vue-template-compiler
 │  ├─weex-template-compiler
@@ -35,44 +35,3 @@
 └─types                          # TypeScript类型定义
     └─test
 ```
-
-## 实例方法
-
-```js
-// source\vue2\src\core\instance\index.js
-import { initMixin } from "./init";
-import { stateMixin } from "./state";
-import { renderMixin } from "./render";
-import { eventsMixin } from "./events";
-import { lifecycleMixin } from "./lifecycle";
-import { warn } from "../util/index";
-
-function Vue(options) {
-  if (process.env.NODE_ENV !== "production" && !(this instanceof Vue)) {
-    warn("Vue is a constructor and should be called with the `new` keyword");
-  }
-  this._init(options);
-}
-
-initMixin(Vue);
-stateMixin(Vue);
-eventsMixin(Vue);
-lifecycleMixin(Vue);
-renderMixin(Vue);
-
-export default Vue;
-```
-
-分别调用`initMixin` `stateMixin` `eventsMixin` `lifecycleMixin` 和`renderMixin` 函数的作用是向`vue` 的原型中挂载方法
-
-### 数据相关的实例方法
-
-`vm.$watch`、`vm.$set`和`vm.$delete`
-
-### 事件相关的实例方法
-
-vm.$on、vm.$once、vm.$off和vm.$emit
-
-### 生命周期相关的实例方法
-
-vm.$mount、vm.$forceUpdate、vm.$nextTick和vm.$destroy。
