@@ -1,36 +1,24 @@
-## Vue 2 官网
+# vue-demo
 
-1. 兼容性：不支持 IE8 以及以下
-2. 当前版本 2.6.12
-3. 理论上使用更小的运行版本，使用完整版需要在`webpack`等打包工具配置别名
-4. mode: 'production' 选项告知当前什么环境
-5. Vue+现代化工具链+类库
-6. 声明式渲染——`响应式`
-7. 条件与循环
-   - 强大的过渡效果
-   - v-for 的 key 问题
-8. 处理用户输入
-   - @click 监听 Vue 实例的方法
-   - v-model 指令
-9. 组件化应用构建
-   - 一个组件是一个 Vue 实例
-   - 自定义组件与自定义元素
-10. 创建一个 Vue 实例
-    - new vue(options) // 选项对象
-    - Vue 组件亦是 Vue 实例
-11. 实例的生命周期钩子
-12. 模板语法
-    - 可以直接写渲染函数
-    - JSX 语法
-13. 插值语法
-    - 文本
-    - JS 表达式
-14. 指令
-    - 指令的动态参数 v-bind:[attributeName]
-    - 修饰符 v-on:submit.prevent
-    - 缩写 :[key] @[event]
-15. 计算属性
-    - 计算属性缓存
-    - 方法
+## Project setup
+```
+yarn install
+```
 
-<hr />
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
