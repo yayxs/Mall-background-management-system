@@ -1,7 +1,4 @@
-1. [vue-docs](https://github.com/yayxs/vue-learn/tree/vue-docs)
+# 《深入浅出Vue.js》
 
-2. [vue-cli](https://github.com/yayxs/vue-learn/tree/vue-cli)
-
-3. [vue-router](https://github.com/yayxs/vue-learn/tree/vue-router)
-
-4. [vuex](https://github.com/yayxs/vue-learn/tree/vuex)
+## 第一篇 变化侦测
+普通的对象和数据变化侦测的方式是不同的，当状态发生变化时，Vue.js立刻就知道了，而且在一定程度上知道哪些状态变了。
