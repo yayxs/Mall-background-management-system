@@ -1,8 +1,7 @@
-import Vue from 'vue'
+import { createApp } from 'vue';
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import SumApp from './views/Sum.vue'
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+import CounterApp from './views/Counter.vue'
+createApp(SumApp).mount('#app')
