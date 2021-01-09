@@ -1,30 +1,15 @@
 {
-  "name": "vue-learn",
-  "version": "1.1.1",
-  "description": "Now is the best time to relearn vue",
-  "repository": {},
+  "name": "composition-api-app",
+  "version": "0.1.0",
   "scripts": {
-    "bd": "rollup -c",
-    "ss": "cross-env ENV=development rollup  -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "yayxs",
-  "license": "ISC",
-  "devDependencies": {
-    "cz-conventional-changelog": "^3.2.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "dev": "vite",
+    "build": "vite build"
   },
   "dependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "cross-env": "^7.0.2",
-    "rollup": "^2.18.1",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-serve": "^1.0.1"
+    "vue": "^3.0.4"
+  },
+  "devDependencies": {
+    "vite": "^1.0.0-rc.13",
+    "@vue/compiler-sfc": "^3.0.4"
   }
 }
