@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //          - vue.js 是完整版本 (编译器 + 运行时)
+      //     - 编译器：将模板字符串转为js 渲染函数
+      //  - vue.runtime.js 运行时版本
+      //  - vue.min.js 完整版 用于生产环境
+      //  - vue.runtime.min.js
+
+      //  - umd
+    </script>
+    <div id="el">{{el}}</div>
+    <!-- 运行时 + 编译器的 UMD 版本  -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#el",
+        template: "<div>hi  template </div>",
+        render(h) {
+          return h("div", this.render);
+        },
+        data: {
+          el: "hello vue el",
+          render: "render",
+        },
+      });
+    </script>
+  </body>
+</html>

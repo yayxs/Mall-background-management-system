@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      {{obj.name}}---{{obj.age}}---{{obj.age===undefined}}
+
+      <button @click="handleClick">改变</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src=""></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          obj: {
+            name: 123,
+          },
+        },
+        methods: {
+          handleClick() {
+            console.log(this.obj)
+            this.obj['age'] = 12
+            console.log(this.obj)
+          },
+        },
+      })
+    </script>
+  </body>
+</html>
