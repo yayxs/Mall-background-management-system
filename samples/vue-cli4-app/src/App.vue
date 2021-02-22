@@ -4,7 +4,10 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <input type="text" v-model="message" />
     <hr />
-    <todo-list>
+    <ul>
+      <li v-for="item in list" :key="item.id">{{ item.title }}</li>
+    </ul>
+    <!-- <todo-list>
       <todo-item
         @delete="handleDelete"
         v-for="(item, index) in list"
@@ -16,44 +19,44 @@
           <span>前置图标 {{ value }}</span>
         </template>
       </todo-item>
-    </todo-list>
+    </todo-list> -->
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 // import TodoList from "./components/TodoList.vue";
-import TodoItem from "./components/TodoItem.vue";
+// import TodoItem from "./components/TodoItem.vue";
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     // TodoList,
-    TodoItem,
+    // TodoItem,
   },
   data() {
     return {
-      message: "hello",
+      // message: "hello",
       list: [
         {
-          title: "list00",
+          title: 'vue',
+          id: 1,
           del: false,
         },
         {
-          title: "list01",
+          title: 'react',
+          id: 2,
           del: true,
         },
       ],
-    };
-  },
-  methods: {
-    handleDelete(val){
-      console.log(val)
     }
   },
-};
+  methods: {
+    handleDelete(val) {
+      console.log(val)
+    },
+  },
+}
 </script>
 
-<style>
-
-</style>
+<style></style>
