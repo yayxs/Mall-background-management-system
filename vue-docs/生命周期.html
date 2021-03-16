@@ -17,27 +17,34 @@
         template: `<div>{{name}}</div>`,
         data: function () {
           return {
-            name: 'father',
-          }
+            name: "father",
+          };
+        },
+        computed: {
+          total: function () {
+            return "123";
+          },
         },
         beforeCreate() {
-          console.log(`father beforeCreate`)
+          console.log(`father beforeCreate`);
+          console.log("try to call computed", this.total);
         },
         created() {
-          console.log(`father created`)
+          console.log(`father created`);
+          console.log("try to call computed", this.total);
         },
-      }
+      };
       // 根组件
 
       const app = new Vue({
-        el: '#app',
+        el: "#app",
         data: {
-          name: 'app 组件',
+          name: "app 组件",
         },
         components: {
           father,
         },
-      })
+      });
     </script>
   </body>
 </html>

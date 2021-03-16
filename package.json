@@ -1,13 +1,9 @@
 {
   "name": "vue-learn",
-  "version": "1.1.1",
-  "description": "Now is the best time to relearn vue",
+  "version": "1.0",
+  "description": "Now is the best time to learn vue",
   "repository": {},
-  "scripts": {
-    "bd": "rollup -c",
-    "ss": "cross-env ENV=development rollup  -c -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "yayxs",
   "license": "ISC",
@@ -18,13 +14,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "cross-env": "^7.0.2",
-    "rollup": "^2.18.1",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-serve": "^1.0.1"
   }
 }
