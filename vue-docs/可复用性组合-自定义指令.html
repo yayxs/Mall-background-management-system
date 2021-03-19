@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- {{foo}} -->
+      <input v-focus />
+      <!-- <comp /> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+      // 全局指令
+      Vue.directive('auto-focus', {
+        // 当被绑定的元素插入到 DOM 中时……
+        inserted(el) {
+          el.focus();
+        },
+      });
+      // 局部指令
+      const vm = new Vue({
+        el: '#app',
+        directives: {
+          focus: {
+            // 只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置
+            bind() {},
+            // 被绑定元素插入父节点时调用
+            inserted: function (el, bind, vnode, oldVnode) {
+              console.log(bind);
+              console.log(vnode);
+              console.log(oldVnode);
+              el.focus();
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
