@@ -1,18 +1,20 @@
 module.exports = {
-  // 因为每种 CSS 文件类型都有多个规则，
-  css: {
-    loaderOptions: {
-      sass: {
-        prependData: '@import "~@/styles/variables.scss"'
-      }
-    }
-  },
+  publicPath: '/', // 默认是 '/' output.publicPath '/my-app/' '' './' 任何路径
+  outputDir: 'dist',
+  assetsDir: '', // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录。
+  indexPath: 'index.html',
+  filenameHashing: true,
+  pages: undefined,
+  lintOnSave: process.env.NODE_ENV !== 'production',
+  runtimeCompiler: true,
+  productionSourceMap: true,
+  integrity: false,
   configureWebpack: (config) => {
     if (process.env.NODE_ENV === 'production') {
 
     } else {}
   },
-  chainWebpack (config) {
+  chainWebpack (config) { // 许对内部的 webpack 配置进行更细粒度的修改
     config.module
       .rule('vue')
       .use('vue-loader')
@@ -37,5 +39,28 @@ module.exports = {
       .use('url-loader')
       .loader('url-loader')
       .tap(ops => Object.assign(ops, { limit: 10240 }))
+  },
+  // 因为每种 CSS 文件类型都有多个规则，
+  css: {
+    requireModuleExtension: true,
+    sourceMap: false, // 设置为 true 之后可能会影响构建的性能。
+    loaderOptions: {
+      css: {
+        // 这里的选项会传递给 css-loader
+      },
+      postcss: {
+        // 这里的选项会传递给 postcss-loader
+      },
+      sass: {
+        prependData: '@import "~@/styles/variables.scss"'
+      }
+    }
+  },
+  devServer: {
+    // proxy: '',
+    proxy: {}
+  },
+  pluginOptions: {
+
   }
 }

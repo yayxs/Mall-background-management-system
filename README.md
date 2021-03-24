@@ -1,5 +1,5 @@
-# Vue CLI
 
+# 从0 学习VueCLI
 ## 特点
 
 - 开箱即用
@@ -52,3 +52,10 @@ Options:
     <img src="@/assets/logo.png" alt="" />
 ```
 
+
+# 配置参考
+
+## vue.config.js 可选的配置文件
+
+ - @vue/cli-service 自动加载
+ - 包含选项的对象
