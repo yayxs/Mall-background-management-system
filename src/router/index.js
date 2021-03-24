@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 // import Home from "@/pages/Home.vue";
 // import About from "@/pages/About.vue";
-// import List from "@/pages/List.vue";
+import List from '@/pages/List.vue'
 // import More from "@/pages/More.vue";
 // import Detail from "@/pages/Detail.vue";
 import Main from '../components/Main.vue'
@@ -22,10 +22,20 @@ import TestGo from '../views/TestGo.vue'
 import UserSettings from '../components/UserSettings'
 import Email from '../components/UserSettings/Email.vue'
 import Info from '../components/UserSettings/Info.vue'
+import Ishow from '../pages/isShow.vue'
 const routes = [
+  {
+    path: '/list',
+    name: 'list',
+    component: List,
+  },
   {
     path: '/',
     redirect: { name: 'main' },
+  },
+  {
+    path: '/isShow',
+    component: Ishow,
   },
   {
     path: '/settings',
@@ -53,11 +63,23 @@ const routes = [
     path: '/foo',
     name: 'foo',
     component: Foo,
+    // beforeEnter: (to, from, next) => {
+    //   console.log(to)
+    //   console.log(from)
+    //   console.log(next)
+    //   console.log('into foo')
+    // },
+    children: [
+      {
+        path: 'bar',
+        component: Bar,
+        meta: {
+          auth: true,
+        },
+      },
+    ],
   },
-  {
-    path: '/bar/:name/base/:age',
-    component: Bar,
-  },
+
   {
     path: '/testPush',
     component: TestPush,

@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view name="default"></router-view>
+    <transition>
+      <router-view name="default"></router-view>
+    </transition>
     <!-- <router-view name="r"></router-view>
     <router-view name="z"></router-view> -->
   </div>

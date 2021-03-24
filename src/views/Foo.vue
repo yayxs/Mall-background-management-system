@@ -1,7 +1,7 @@
 <template>
   <div>
-    Foo
-    <button @click="handleClick">Go to no</button>
+    <h4>Foo</h4>
+    <router-view></router-view>
   </div>
 </template>
 
