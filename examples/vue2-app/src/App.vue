@@ -1,34 +1,23 @@
 <template>
-  <div id="app">
-    <div class="box" v-for="item in list" :ref="setItemRef" :key="item">
-      {{ item }}
-    </div>
+  <div>
+    <NextTickComp />
+    <SetComp />
+    <Home />
   </div>
 </template>
 
 <script>
+import NextTickComp from './components/NextTickComp'
+import SetComp from './components/SetComp'
+import Home from './views/Home'
 export default {
-  name: "App",
-  components: {},
-  data() {
-    return {
-      itemRefs: [],
-      list: [1, 2, 3],
-    };
+  name: 'App',
+  components: {
+    NextTickComp,
+    SetComp,
+    Home,
   },
-  methods: {
-    setItemRef(el) {
-      console.log(el)
-      this.itemRefs.push(el);
-    },
-  },
-  beforeUpdate() {
-    this.itemRefs = [];
-  },
-  updated() {
-    console.log(this.itemRefs);
-  },
-};
+}
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
