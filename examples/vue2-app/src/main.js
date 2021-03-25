@@ -24,6 +24,7 @@ import * as filters from './filters' // global filters
 Object.keys(filters).forEach((key) => {
   Vue.filter(key, filters[key])
 })
+Vue.prototype.$appName = 'My Name'
 new Vue({
   el: '#app', // string(CSS选择器) 或者是Element（HTMLElement实例）
   template: `
