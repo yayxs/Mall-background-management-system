@@ -1,16 +1,17 @@
 {
-  "name": "vue-learn",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/yayxs/vue-learn.git",
-  "author": "yayxs <leaderywl@163.com>",
-  "license": "MIT",
+  "name": "vite-learn",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
   "dependencies": {
-    "vue-loader": "^15.9.6",
-    "vue-template-compiler": "^2.6.12"
+    "vue": "^3.0.5"
   },
   "devDependencies": {
-    "node-sass": "^5.0.0",
-    "sass-loader": "^11.0.1"
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "vite": "^2.1.3"
   }
 }
