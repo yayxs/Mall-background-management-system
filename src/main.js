@@ -1,4 +1,9 @@
-import { createApp } from 'vue'
+import {createApp }  from 'vue'
 import App from './App.vue'
+// const App = {
 
-createApp(App).mount('#app')
+// }
+
+const app =  createApp(App)
+// css 选择器的字符串
+app.mount('#app')
